@@ -1,19 +1,17 @@
-import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "../components/navbar/Navbar";
-import { GlobalStyles } from "../styles/Global.styles";
-import Footer from "../components/footer/Footer";
-import Home from "../pages/home/Home";
-import Login from "../pages/login/Login";
-import Register from "../pages/register/Register";
-import PrivateRouter from "./PrivateRouter";
-import Detail from "../pages/detail/Detail";
-import About from "../pages/about/About";
+import React, { useState } from "react"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Navbar from "../components/navbar/Navbar"
+import { GlobalStyles } from "../styles/Global.styles"
+import Footer from "../components/footer/Footer"
+import Home from "../pages/home/Home"
+import Login from "../pages/login/Login"
+import Register from "../pages/register/Register"
+import PrivateRouter from "./PrivateRouter"
+import Detail from "../pages/detail/Detail"
+import About from "../pages/about/About"
 
 const AppRouter = () => {
-  const [currentUser, setCurrentUser] = useState(
-    sessionStorage.getItem("user")
-  );
+  const [currentUser, setCurrentUser] = useState(sessionStorage.getItem("user"))
   return (
     <BrowserRouter>
       <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
@@ -34,12 +32,12 @@ const AppRouter = () => {
 
         <Route element={<PrivateRouter />}>
           <Route path="/about" element={<About />} />
-          <Route path="/detail" element={<Detail />} />
+          <Route path="/detail/:id" element={<Detail />} />
         </Route>
       </Routes>
       <Footer />
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default AppRouter;
+export default AppRouter
