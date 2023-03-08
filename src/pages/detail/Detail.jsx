@@ -31,7 +31,12 @@ const Detail = () => {
             <span key={item}>{item}</span>
           ))}
         </p>
-        <p>{state.volumeInfo.publisher}</p>
+        <p>
+          {state.volumeInfo.publisherDate} /{" "}
+          {state.volumeInfo.publisher && (
+            <span>/{state.volumeInfo.publisher}</span>
+          )}
+        </p>
       </InfoPart>
     </DetailContainer>
   )
