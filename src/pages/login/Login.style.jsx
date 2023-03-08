@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import Flex from "../../styles/Flex"
+import styled from "styled-components";
+import Flex from "../../styles/Flex";
 
 export const LoginContainer = styled(Flex)`
   height: 90vh;
@@ -7,7 +7,7 @@ export const LoginContainer = styled(Flex)`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-`
+`;
 
 export const FormContainer = styled(Flex)`
   width: 40rem;
@@ -15,7 +15,7 @@ export const FormContainer = styled(Flex)`
   max-width: 50rem;
   padding: 0.5rem;
   flex-direction: column;
-`
+`;
 
 export const StyledForm = styled.form`
   display: flex;
@@ -33,7 +33,7 @@ export const StyledForm = styled.form`
   letter-spacing: 0.5px;
   outline: none;
   border: none;
-`
+`;
 
 export const Header = styled.h1`
   font-size: 2rem;
@@ -44,7 +44,7 @@ export const Header = styled.h1`
   transform: translate(0.1em, 0.1em);
   background-image: linear-gradient(305deg, darkblue, yellow, darkblue);
   -webkit-background-clip: text;
-`
+`;
 
 export const StyledInput = styled.input`
   display: block;
@@ -64,7 +64,7 @@ export const StyledInput = styled.input`
   :focus {
     background-color: white;
   }
-`
+`;
 
 export const StyledButton = styled.button`
   margin-top: 50px;
@@ -81,4 +81,4 @@ export const StyledButton = styled.button`
   &:hover {
     opacity: 1;
   }
-`
+`;
