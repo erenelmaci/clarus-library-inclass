@@ -31,7 +31,7 @@ export const InfoPart = styled.div`
   font-size: 1.4rem;
   margin: 2rem;
   text-align: center;
-  span{
-    margin: 1rem;
+  span {
+    margin:1rem;
   }
 `;

@@ -1,19 +1,12 @@
-import React from "react"
-import { useLocation, useParams } from "react-router-dom"
-import {
-  Description,
-  DetailContainer,
-  DetailImg,
-  DetailTitle,
-  InfoPart,
-} from "./Detail.style"
+import React from "react";
+import { useLocation, useParams } from "react-router-dom";
+import {DetailContainer,DetailTitle,DetailImg,Description, InfoPart} from "./Detail.style"
 import defaultImg from "../../assets/book.jpg"
-
 const Detail = () => {
-  const { state } = useLocation()
-  const { id } = useParams()
-  console.log(id)
-  console.log(state)
+  const { state } = useLocation();
+  const { id } = useParams();
+  console.log(id);
+  console.log(state);
 
   return (
     <DetailContainer>
@@ -25,6 +18,7 @@ const Detail = () => {
         />
       </DetailImg>
       <Description>{state.volumeInfo.description}</Description>
+
       <InfoPart>
         <p>
           {state.volumeInfo.authors?.map((item) => (
@@ -32,14 +26,14 @@ const Detail = () => {
           ))}
         </p>
         <p>
-          {state.volumeInfo.publisherDate} /{" "}
+          {state.volumeInfo.publishedDate}{" "}
           {state.volumeInfo.publisher && (
-            <span>/{state.volumeInfo.publisher}</span>
+            <span>/ {state.volumeInfo.publisher} </span>
           )}
         </p>
       </InfoPart>
     </DetailContainer>
-  )
-}
+  );
+};
 
-export default Detail
+export default Detail;

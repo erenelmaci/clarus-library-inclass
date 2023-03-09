@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 import Flex from "../../styles/Flex"
 
 export const CardContainer = styled(Flex)`
@@ -16,19 +16,20 @@ export const CardContainer = styled(Flex)`
     box-shadow: none;
     transition: all 0.3s ease-in;
   }
-`
+`;
 
 export const CardHeader = styled.h1`
   font-size: 1.2rem;
   text-align: center;
   overflow: hidden;
   height: 5rem;
-`
+`;
+
 export const CardImg = styled.img`
   min-height: 10rem;
   max-height: 10rem;
   border-radius: 10px;
-`
+`;
 
 export const CardButton = styled.button`
   font-weight: bold;
@@ -41,6 +42,6 @@ export const CardButton = styled.button`
   &:hover {
     opacity: 0.6;
   }
-  background: ${({ theme }) => theme.colors.mainColor};
-  color: ${({ theme }) => theme.colors.linkHoverColor};
-`
+  background: ${({theme})=> theme.colors.mainColor};
+  color: ${({theme})=> theme.colors.linkHoverColor};
+`;

@@ -6,6 +6,7 @@ import axios from "axios";
 import Card from "../../components/card/Card";
 
 const Home = () => {
+  // const printType = ["all","books","magazines"]
   const [query, setQuery] = useState("");
   const [selectType, setSelectType] = useState("all");
   const [myData, setMyData] = useState([]);
@@ -33,12 +34,12 @@ const Home = () => {
 
       {!myData.length ? (
         <HomeImg>
-          <img src={homeImg} alt="home image" />
+          <img src={homeImg} alt="home" />
         </HomeImg>
       ) : (
         <MainContainer wrap="wrap">
           {
-            myData.map((item)=> <Card key={item.id} item={item }/>)
+            myData.map((item)=> <Card key={item.id} item={item} />)
           }
         </MainContainer>
       )}
