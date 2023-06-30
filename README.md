@@ -5,7 +5,7 @@
 
 ## Description
 
-Project aims to create a Clarus Library.
+Project aims to create a Clarus Library
 
 ## Problem Statement
 
